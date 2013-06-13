@@ -1,0 +1,366 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Header Files\Modules">
+      <UniqueIdentifier>{c13462fc-c774-4125-bff5-685112bb546a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Regularizers">
+      <UniqueIdentifier>{dfe1cc63-9efa-42b0-9f4d-b5441129c0f3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Initializers">
+      <UniqueIdentifier>{99774e55-a536-4057-adaf-b15db0f90eff}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Trainers">
+      <UniqueIdentifier>{b321da81-f174-4836-ab9d-af64021f7a5f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Tensors">
+      <UniqueIdentifier>{591bf9e7-784f-4d51-88a1-f930a33faea2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Kernels">
+      <UniqueIdentifier>{2373b46e-49ae-4024-8d03-234ea14b85bd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\CostModules">
+      <UniqueIdentifier>{3aa41971-147c-4d16-8faa-183fb2155d8c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\DataLoaders">
+      <UniqueIdentifier>{99dfe60c-77e5-429b-bda3-6a6e4ae559f6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Misc">
+      <UniqueIdentifier>{e841d7a1-f853-462c-b9e3-6127f31cceb0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\ExternalComponents">
+      <UniqueIdentifier>{897af21f-0882-4957-821d-526eea1417ff}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Challenges">
+      <UniqueIdentifier>{c3f24449-4b40-48eb-935e-3f30eba294f5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\IO">
+      <UniqueIdentifier>{5cdb875c-7ff5-4236-938f-4b7ab8211ca6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\ExternalComponents\RapidXML">
+      <UniqueIdentifier>{e6a8c724-30c3-4798-be01-071e7ed43f4f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Temporary">
+      <UniqueIdentifier>{4ea57bc6-c9eb-40cc-b81b-324ba6112db8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\ExternalComponents\liblbfgs">
+      <UniqueIdentifier>{45b1a5f8-a618-47df-b3d9-1d37aac4bf06}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Utilities.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="RandomGenerator.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="liblbfgs\lbfgs.c">
+      <Filter>Header Files\ExternalComponents\liblbfgs</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="NN.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Preprocessing.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AbsModule.h">
+      <Filter>Header Files\Modules</Filter>
+    </ClInclude>
+    <ClInclude Include="BiasModule.h">
+      <Filter>Header Files\Modules</Filter>
+    </ClInclude>
+    <ClInclude Include="CompositeModule.h">
+      <Filter>Header Files\Modules</Filter>
+    </ClInclude>
+    <ClInclude Include="KernelModule.h">
+      <Filter>Header Files\Modules</Filter>
+    </ClInclude>
+    <ClInclude Include="LinearMixModule.h">
+      <Filter>Header Files\Modules</Filter>
+    </ClInclude>
+    <ClInclude Include="RectifiedLinearUnitModule.h">
+      <Filter>Header Files\Modules</Filter>
+    </ClInclude>
+    <ClInclude Include="Module.h">
+      <Filter>Header Files\Modules</Filter>
+    </ClInclude>
+    <ClInclude Include="AbsRegularizer.h">
+      <Filter>Header Files\Regularizers</Filter>
+    </ClInclude>
+    <ClInclude Include="EmptyRegularizer.h">
+      <Filter>Header Files\Regularizers</Filter>
+    </ClInclude>
+    <ClInclude Include="Regularizer.h">
+      <Filter>Header Files\Regularizers</Filter>
+    </ClInclude>
+    <ClInclude Include="SoftSignModule.h">
+      <Filter>Header Files\Modules</Filter>
+    </ClInclude>
+    <ClInclude Include="SigmoidModule.h">
+      <Filter>Header Files\Modules</Filter>
+    </ClInclude>
+    <ClInclude Include="TanhModule.h">
+      <Filter>Header Files\Modules</Filter>
+    </ClInclude>
+    <ClInclude Include="WeightDecayRegularizer.h">
+      <Filter>Header Files\Regularizers</Filter>
+    </ClInclude>
+    <ClInclude Include="ConstantInitializer.h">
+      <Filter>Header Files\Initializers</Filter>
+    </ClInclude>
+    <ClInclude Include="UniformInitializer.h">
+      <Filter>Header Files\Initializers</Filter>
+    </ClInclude>
+    <ClInclude Include="GaussianInitializer.h">
+      <Filter>Header Files\Initializers</Filter>
+    </ClInclude>
+    <ClInclude Include="LinearMixInitializer.h">
+      <Filter>Header Files\Initializers</Filter>
+    </ClInclude>
+    <ClInclude Include="Tensor.h">
+      <Filter>Header Files\Tensors</Filter>
+    </ClInclude>
+    <ClInclude Include="ParametersInitializer.h">
+      <Filter>Header Files\Initializers</Filter>
+    </ClInclude>
+    <ClInclude Include="Trainer.h">
+      <Filter>Header Files\Trainers</Filter>
+    </ClInclude>
+    <ClInclude Include="SGD_Trainer.h">
+      <Filter>Header Files\Trainers</Filter>
+    </ClInclude>
+    <ClInclude Include="Kernel.h">
+      <Filter>Header Files\Kernels</Filter>
+    </ClInclude>
+    <ClInclude Include="KernelFactory.h">
+      <Filter>Header Files\Kernels</Filter>
+    </ClInclude>
+    <ClInclude Include="CostModule.h">
+      <Filter>Header Files\CostModules</Filter>
+    </ClInclude>
+    <ClInclude Include="Utilities.h">
+      <Filter>Header Files\Misc</Filter>
+    </ClInclude>
+    <ClInclude Include="RandomGenerator.h">
+      <Filter>Header Files\Misc</Filter>
+    </ClInclude>
+    <ClInclude Include="dirent.h">
+      <Filter>Header Files\ExternalComponents</Filter>
+    </ClInclude>
+    <ClInclude Include="MiniAiff.h">
+      <Filter>Header Files\ExternalComponents</Filter>
+    </ClInclude>
+    <ClInclude Include="TrainDataset.h">
+      <Filter>Header Files\DataLoaders</Filter>
+    </ClInclude>
+    <ClInclude Include="WhalesDetection.h">
+      <Filter>Header Files\Challenges</Filter>
+    </ClInclude>
+    <ClInclude Include="ConvolutionalKernel.h">
+      <Filter>Header Files\Kernels</Filter>
+    </ClInclude>
+    <ClInclude Include="MaxPoolingKernel.h">
+      <Filter>Header Files\Kernels</Filter>
+    </ClInclude>
+    <ClInclude Include="LogisticCostModule.h">
+      <Filter>Header Files\CostModules</Filter>
+    </ClInclude>
+    <ClInclude Include="MseCostModule.h">
+      <Filter>Header Files\CostModules</Filter>
+    </ClInclude>
+    <ClInclude Include="BaseTensorDataLoader.h">
+      <Filter>Header Files\DataLoaders</Filter>
+    </ClInclude>
+    <ClInclude Include="FullTensorDataLoader.h">
+      <Filter>Header Files\DataLoaders</Filter>
+    </ClInclude>
+    <ClInclude Include="PartialTensorDataLoader.h">
+      <Filter>Header Files\DataLoaders</Filter>
+    </ClInclude>
+    <ClInclude Include="RandomShiftPartialTensorDataLoader.h">
+      <Filter>Header Files\DataLoaders</Filter>
+    </ClInclude>
+    <ClInclude Include="FixedShiftPartialTensorDataLoader.h">
+      <Filter>Header Files\DataLoaders</Filter>
+    </ClInclude>
+    <ClInclude Include="CashedTensor.h">
+      <Filter>Header Files\Tensors</Filter>
+    </ClInclude>
+    <ClInclude Include="exports.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="LinearModule.h">
+      <Filter>Header Files\Modules</Filter>
+    </ClInclude>
+    <ClInclude Include="MisclassificationRateCostModule.h">
+      <Filter>Header Files\CostModules</Filter>
+    </ClInclude>
+    <ClInclude Include="CrossEntropyCostModule.h">
+      <Filter>Header Files\CostModules</Filter>
+    </ClInclude>
+    <ClInclude Include="SoftmaxModule.h">
+      <Filter>Header Files\Modules</Filter>
+    </ClInclude>
+    <ClInclude Include="DropoutModule.h">
+      <Filter>Header Files\Modules</Filter>
+    </ClInclude>
+    <ClInclude Include="IOTreeNode.h">
+      <Filter>Header Files\IO</Filter>
+    </ClInclude>
+    <ClInclude Include="RegularizerFactory.h">
+      <Filter>Header Files\IO</Filter>
+    </ClInclude>
+    <ClInclude Include="ModuleFactory.h">
+      <Filter>Header Files\IO</Filter>
+    </ClInclude>
+    <ClInclude Include="InitializerFactory.h">
+      <Filter>Header Files\IO</Filter>
+    </ClInclude>
+    <ClInclude Include="TensorIO.h">
+      <Filter>Header Files\IO</Filter>
+    </ClInclude>
+    <ClInclude Include="KernelFactoryIO.h">
+      <Filter>Header Files\IO</Filter>
+    </ClInclude>
+    <ClInclude Include="RapidXML-1.13\rapidxml.hpp">
+      <Filter>Header Files\ExternalComponents\RapidXML</Filter>
+    </ClInclude>
+    <ClInclude Include="RapidXML-1.13\rapidxml_iterators.hpp">
+      <Filter>Header Files\ExternalComponents\RapidXML</Filter>
+    </ClInclude>
+    <ClInclude Include="RapidXML-1.13\rapidxml_print.hpp">
+      <Filter>Header Files\ExternalComponents\RapidXML</Filter>
+    </ClInclude>
+    <ClInclude Include="RapidXML-1.13\rapidxml_utils.hpp">
+      <Filter>Header Files\ExternalComponents\RapidXML</Filter>
+    </ClInclude>
+    <ClInclude Include="Converter.h">
+      <Filter>Header Files\Misc</Filter>
+    </ClInclude>
+    <ClInclude Include="IOXML.h">
+      <Filter>Header Files\IO</Filter>
+    </ClInclude>
+    <ClInclude Include="BranchModule.h">
+      <Filter>Header Files\Temporary</Filter>
+    </ClInclude>
+    <ClInclude Include="CostAndGradients.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AbsCostModule.h">
+      <Filter>Header Files\CostModules</Filter>
+    </ClInclude>
+    <ClInclude Include="my_math.h">
+      <Filter>Header Files\Misc</Filter>
+    </ClInclude>
+    <ClInclude Include="BranchSemisupervisedNN.h">
+      <Filter>Header Files\Temporary</Filter>
+    </ClInclude>
+    <ClInclude Include="DataLoaderFactory.h">
+      <Filter>Header Files\IO</Filter>
+    </ClInclude>
+    <ClInclude Include="ITensorDataLoader.h">
+      <Filter>Header Files\DataLoaders</Filter>
+    </ClInclude>
+    <ClInclude Include="SemisupervisedLearning2013.h">
+      <Filter>Header Files\Challenges</Filter>
+    </ClInclude>
+    <ClInclude Include="strtk\strtk.hpp">
+      <Filter>Header Files\ExternalComponents</Filter>
+    </ClInclude>
+    <ClInclude Include="MatrixOperations.h">
+      <Filter>Header Files\Misc</Filter>
+    </ClInclude>
+    <ClInclude Include="GaussianNoiseModule.h">
+      <Filter>Header Files\Modules</Filter>
+    </ClInclude>
+    <ClInclude Include="MeanStdNormalizingModule.h">
+      <Filter>Header Files\Modules</Filter>
+    </ClInclude>
+    <ClInclude Include="PureSoftmaxModule.h">
+      <Filter>Header Files\Modules</Filter>
+    </ClInclude>
+    <ClInclude Include="BatchPureSoftmaxModule.h">
+      <Filter>Header Files\Modules</Filter>
+    </ClInclude>
+    <ClInclude Include="BatchSoftmaxModule.h">
+      <Filter>Header Files\Modules</Filter>
+    </ClInclude>
+    <ClInclude Include="UnsupervisedGroupEntropyCostModule.h">
+      <Filter>Header Files\CostModules</Filter>
+    </ClInclude>
+    <ClInclude Include="IGroupEntropyFeatureGroupProvider.h">
+      <Filter>Header Files\CostModules</Filter>
+    </ClInclude>
+    <ClInclude Include="UnsupervisedFeatureGroupProvider.h">
+      <Filter>Header Files\CostModules</Filter>
+    </ClInclude>
+    <ClInclude Include="FeatureGroups.h">
+      <Filter>Header Files\CostModules</Filter>
+    </ClInclude>
+    <ClInclude Include="GroupEntropyCostModule.h">
+      <Filter>Header Files\CostModules</Filter>
+    </ClInclude>
+    <ClInclude Include="SupervisedFeatureGroupProvider.h">
+      <Filter>Header Files\CostModules</Filter>
+    </ClInclude>
+    <ClInclude Include="SupervisedGroupEntropyCostModule.h">
+      <Filter>Header Files\CostModules</Filter>
+    </ClInclude>
+    <ClInclude Include="EntropyRegularizingModule.h">
+      <Filter>Header Files\Modules</Filter>
+    </ClInclude>
+    <ClInclude Include="liblbfgs\arithmetic_ansi.h">
+      <Filter>Header Files\ExternalComponents\liblbfgs</Filter>
+    </ClInclude>
+    <ClInclude Include="liblbfgs\arithmetic_sse_double.h">
+      <Filter>Header Files\ExternalComponents\liblbfgs</Filter>
+    </ClInclude>
+    <ClInclude Include="liblbfgs\arithmetic_sse_float.h">
+      <Filter>Header Files\ExternalComponents\liblbfgs</Filter>
+    </ClInclude>
+    <ClInclude Include="liblbfgs\lbfgs.h">
+      <Filter>Header Files\ExternalComponents\liblbfgs</Filter>
+    </ClInclude>
+    <ClInclude Include="LbfgsMinibatchTrainer.h">
+      <Filter>Header Files\Trainers</Filter>
+    </ClInclude>
+    <ClInclude Include="ClassificationBalancedPairsTensorDataLoader.h">
+      <Filter>Header Files\DataLoaders</Filter>
+    </ClInclude>
+    <ClInclude Include="ClassificationPairsOutputTensorDataLoader.h">
+      <Filter>Header Files\DataLoaders</Filter>
+    </ClInclude>
+    <ClInclude Include="EntropyCostModule.h">
+      <Filter>Header Files\CostModules</Filter>
+    </ClInclude>
+    <ClInclude Include="MaxElementLikelihoodCostModule.h">
+      <Filter>Header Files\CostModules</Filter>
+    </ClInclude>
+    <ClInclude Include="SemisupervisedCostModule.h">
+      <Filter>Header Files\CostModules</Filter>
+    </ClInclude>
+    <ClInclude Include="SemisupervisedTensorDataLoader.h">
+      <Filter>Header Files\DataLoaders</Filter>
+    </ClInclude>
+    <ClInclude Include="LinearMaxModule.h">
+      <Filter>Header Files\Modules</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

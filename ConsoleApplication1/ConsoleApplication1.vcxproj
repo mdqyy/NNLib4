@@ -1,0 +1,194 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{E6145293-C301-493D-B290-66A8F6E66973}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>ConsoleApplication1</RootNamespace>
+    <ProjectName>Main</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v110</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v110</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <LibraryPath>D:\libs\OpenBLAS;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <LibraryPath>D:\libs\OpenBLAS;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;COMPILE_NEURAL_NETWORKS_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>D:\libs\boost_1_53_0;D:\libs\OpenBLAS\include</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>D:\libs\OpenBLAS\libopenblas.lib;D:\Projects\ConsoleApplication1\ConsoleApplication1\MiniAiffx32.lib;D:\libs\boost_1_53_0\stage\lib\libboost_serialization-vc110-mt-gd-1_53.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>D:\libs\boost_1_53_0\stage\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;COMPILE_NEURAL_NETWORKS_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>D:\libs\OpenBLAS\include;D:\libs\boost_1_53_0;</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>D:\libs\OpenBLAS\libopenblas.lib;D:\Projects\ConsoleApplication1\ConsoleApplication1\MiniAiffx32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>D:\libs\boost_1_53_0\stage\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="liblbfgs\lbfgs.c" />
+    <ClCompile Include="Main.cpp" />
+    <ClCompile Include="RandomGenerator.cpp" />
+    <ClCompile Include="Utilities.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="AbsCostModule.h" />
+    <ClInclude Include="AbsModule.h" />
+    <ClInclude Include="AbsRegularizer.h" />
+    <ClInclude Include="BaseTensorDataLoader.h" />
+    <ClInclude Include="BatchPureSoftmaxModule.h" />
+    <ClInclude Include="BatchSoftmaxModule.h" />
+    <ClInclude Include="BiasModule.h" />
+    <ClInclude Include="BranchModule.h" />
+    <ClInclude Include="BranchSemisupervisedNN.h" />
+    <ClInclude Include="CashedTensor.h" />
+    <ClInclude Include="ClassificationBalancedPairsTensorDataLoader.h" />
+    <ClInclude Include="ClassificationPairsOutputTensorDataLoader.h" />
+    <ClInclude Include="CompositeModule.h" />
+    <ClInclude Include="ConstantInitializer.h" />
+    <ClInclude Include="Converter.h" />
+    <ClInclude Include="ConvolutionalKernel.h" />
+    <ClInclude Include="CostAndGradients.h" />
+    <ClInclude Include="CostModule.h" />
+    <ClInclude Include="DataLoaderFactory.h" />
+    <ClInclude Include="dirent.h" />
+    <ClInclude Include="DropoutModule.h" />
+    <ClInclude Include="EmptyRegularizer.h" />
+    <ClInclude Include="CrossEntropyCostModule.h" />
+    <ClInclude Include="EntropyCostModule.h" />
+    <ClInclude Include="EntropyRegularizingModule.h" />
+    <ClInclude Include="exports.h" />
+    <ClInclude Include="FixedShiftPartialTensorDataLoader.h" />
+    <ClInclude Include="FullTensorDataLoader.h" />
+    <ClInclude Include="GaussianInitializer.h" />
+    <ClInclude Include="GaussianNoiseModule.h" />
+    <ClInclude Include="FeatureGroups.h" />
+    <ClInclude Include="GroupEntropyCostModule.h" />
+    <ClInclude Include="IGroupEntropyFeatureGroupProvider.h" />
+    <ClInclude Include="LbfgsMinibatchTrainer.h" />
+    <ClInclude Include="liblbfgs\arithmetic_ansi.h" />
+    <ClInclude Include="liblbfgs\arithmetic_sse_double.h" />
+    <ClInclude Include="liblbfgs\arithmetic_sse_float.h" />
+    <ClInclude Include="liblbfgs\lbfgs.h" />
+    <ClInclude Include="LinearMaxModule.h" />
+    <ClInclude Include="MaxElementLikelihoodCostModule.h" />
+    <ClInclude Include="SemisupervisedCostModule.h" />
+    <ClInclude Include="SemisupervisedTensorDataLoader.h" />
+    <ClInclude Include="SupervisedFeatureGroupProvider.h" />
+    <ClInclude Include="SupervisedGroupEntropyCostModule.h" />
+    <ClInclude Include="UnsupervisedFeatureGroupProvider.h" />
+    <ClInclude Include="UnsupervisedGroupEntropyCostModule.h" />
+    <ClInclude Include="InitializerFactory.h" />
+    <ClInclude Include="IOTreeNode.h" />
+    <ClInclude Include="ITensorDataLoader.h" />
+    <ClInclude Include="Kernel.h" />
+    <ClInclude Include="KernelFactory.h" />
+    <ClInclude Include="KernelFactoryIO.h" />
+    <ClInclude Include="KernelModule.h" />
+    <ClInclude Include="LinearMixInitializer.h" />
+    <ClInclude Include="LinearMixModule.h" />
+    <ClInclude Include="LinearModule.h" />
+    <ClInclude Include="LogisticCostModule.h" />
+    <ClInclude Include="MatrixOperations.h" />
+    <ClInclude Include="MaxPoolingKernel.h" />
+    <ClInclude Include="MeanStdNormalizingModule.h" />
+    <ClInclude Include="MiniAiff.h" />
+    <ClInclude Include="MisclassificationRateCostModule.h" />
+    <ClInclude Include="Module.h" />
+    <ClInclude Include="ModuleFactory.h" />
+    <ClInclude Include="MseCostModule.h" />
+    <ClInclude Include="my_math.h" />
+    <ClInclude Include="NN.h" />
+    <ClInclude Include="ParametersInitializer.h" />
+    <ClInclude Include="PartialTensorDataLoader.h" />
+    <ClInclude Include="Preprocessing.h" />
+    <ClInclude Include="PureSoftmaxModule.h" />
+    <ClInclude Include="RandomGenerator.h" />
+    <ClInclude Include="RandomShiftPartialTensorDataLoader.h" />
+    <ClInclude Include="RapidXML-1.13\rapidxml.hpp" />
+    <ClInclude Include="RapidXML-1.13\rapidxml_iterators.hpp" />
+    <ClInclude Include="RapidXML-1.13\rapidxml_print.hpp" />
+    <ClInclude Include="RapidXML-1.13\rapidxml_utils.hpp" />
+    <ClInclude Include="RectifiedLinearUnitModule.h" />
+    <ClInclude Include="Regularizer.h" />
+    <ClInclude Include="RegularizerFactory.h" />
+    <ClInclude Include="SemisupervisedLearning2013.h" />
+    <ClInclude Include="SGD_Trainer.h" />
+    <ClInclude Include="SigmoidModule.h" />
+    <ClInclude Include="SoftmaxModule.h" />
+    <ClInclude Include="SoftSignModule.h" />
+    <ClInclude Include="strtk\strtk.hpp" />
+    <ClInclude Include="TanhModule.h" />
+    <ClInclude Include="Tensor.h" />
+    <ClInclude Include="TensorIO.h" />
+    <ClInclude Include="TrainDataset.h" />
+    <ClInclude Include="Trainer.h" />
+    <ClInclude Include="UniformInitializer.h" />
+    <ClInclude Include="Utilities.h" />
+    <ClInclude Include="WeightDecayRegularizer.h" />
+    <ClInclude Include="WhalesDetection.h" />
+    <ClInclude Include="IOXML.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

@@ -1,4 +1,4 @@
 NNLib4
 ======
 
-C++ library for training neural networks (no longer supported)
+C++ library for training neural networks (not maintained)
